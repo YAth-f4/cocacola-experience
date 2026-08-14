@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coke-red: #E41E3F;
+  --color-coke-darkred: #C8102E;
+  --color-coke-crimson: #F40009;
+  --color-coke-deep: #8B0018;
+  --color-coke-black: #111111;
+  --color-coke-charcoal: #1C1C1C;
+  --color-coke-pastel: #FAF7F5;
+  --color-coke-pastelSoft: #F3EFEA;
+  --color-coke-pastelCard: #FFFFFF;
+  --color-coke-silver: #E2E8F0;
+  --color-coke-cream: #FDFBF7;
+  --color-coke-gold: #D4AF37;
+
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+body {
+  background-color: #FAF7F5;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E41E3F;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8102E;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 30, 63, 0.08);
+}
+
+.glass-panel-dark {
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coke-gradient-bg {
+  background: radial-gradient(circle at 50% 30%, rgba(228, 30, 63, 0.08) 0%, rgba(250, 247, 245, 1) 70%);
+}
+
+.spencerian-font {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* SVG Path handwriting animation styling */
+.handwrite-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3.5s ease-in-out forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
